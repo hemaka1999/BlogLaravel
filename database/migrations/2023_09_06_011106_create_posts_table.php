@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title', 2048);
             $table->string('slug', 2048);
             $table->string('thumbnail', 2048)->nullable();
-            $table->string('body');
+            $table->longText('body');
             $table->boolean('active');
             $table->datetime('published_at')->nullable();
             $table->foreignIdFor(\App\Models\User::class, 'user_id');

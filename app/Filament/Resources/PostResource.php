@@ -50,8 +50,7 @@ class PostResource extends Resource
 
 
                 Forms\Components\RichEditor::make('body')
-                    ->required()
-                    ->maxLength(255),
+                    ->required(),
                 Forms\Components\Toggle::make('active')
                     ->required(),
                 Forms\Components\DateTimePicker::make('published_at'),
