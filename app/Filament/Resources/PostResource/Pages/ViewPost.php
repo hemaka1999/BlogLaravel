@@ -16,4 +16,6 @@ class ViewPost extends ViewRecord
             Actions\EditAction::make(),
         ];
     }
+
+
 }
