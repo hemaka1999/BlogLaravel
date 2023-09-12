@@ -25,7 +25,7 @@
 </head>
 <body class="bg-white font-family-karla">
 
-    <!-- Top Bar Nav -->
+    {{-- <!-- Top Bar Nav -->
     <nav class="w-full py-4 bg-blue-800 shadow">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
 
@@ -52,16 +52,16 @@
             </div>
         </div>
 
-    </nav>
+    </nav> --}}
 
     <!-- Text Header -->
     <header class="w-full container mx-auto">
         <div class="flex flex-col items-center py-12">
             <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="#">
-                Minimal Blog
+                EcoHarvest: Nurturing Nature's Treasures
             </a>
             <p class="text-lg text-gray-600">
-                Lorem Ipsum Dolor Sit Amet
+                Explore the bountiful world of natural resources and learn how to protect, conserve, and celebrate the Earth's greatest gifts.
             </p>
         </div>
     </header>
@@ -107,7 +107,7 @@
                 </a>
             </div>
 
-            <div class="w-full bg-white shadow flex flex-col my-4 p-6">
+            {{-- <div class="w-full bg-white shadow flex flex-col my-4 p-6">
                 <p class="text-xl font-semibold pb-5">Instagram</p>
                 <div class="grid grid-cols-3 gap-3">
                     <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=1">
@@ -123,14 +123,14 @@
                 <a href="#" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
                     <i class="fab fa-instagram mr-2"></i> Follow @dgrzyb
                 </a>
-            </div>
+            </div> --}}
 
         </aside>
 
     </div>
 
     <footer class="w-full border-t bg-white pb-12">
-        <div
+        {{-- <div
             class="relative w-full flex items-center invisible md:visible md:pb-12"
             x-data="getCarouselData()"
         >
@@ -147,19 +147,19 @@
                 x-on:click="increment()">
                 &#8594;
             </button>
-        </div>
+        </div> --}}
         <div class="w-full container mx-auto flex flex-col items-center">
-            <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
+            {{-- <div class="flex flex-col md:flex-row text-center md:text-left md:justify-between py-6">
                 <a href="#" class="uppercase px-3">About Us</a>
                 <a href="#" class="uppercase px-3">Privacy Policy</a>
                 <a href="#" class="uppercase px-3">Terms & Conditions</a>
                 <a href="#" class="uppercase px-3">Contact Us</a>
-            </div>
-            <div class="uppercase pb-6">&copy; myblog.com</div>
+            </div> --}}
+            <div class="uppercase pb-6">&copy; <a href="https://hemaka1999.github.io/HemakaPamodya/">Hemaka Pamodya</a></div>
         </div>
     </footer>
 
-    <script>
+    {{-- <script>
         function getCarouselData() {
             return {
                 currentIndex: 0,
@@ -182,7 +182,7 @@
                 },
             }
         }
-    </script>
+    </script> --}}
 
 </body>
 </html>

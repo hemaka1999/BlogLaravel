@@ -14,6 +14,10 @@ class Post extends Model
 
     protected $fillable = ['title', 'slug', 'thumbnail', 'body', 'active', 'published_at','user_id'];
 
+    protected $casts = [
+        'published_at' => 'datetime'
+    ];
+
     public function user():BelongsTo {
         return $this->belongsTo(User::class);
     }
@@ -34,6 +38,12 @@ class Post extends Model
     public function shortBody(): string
     {
         return Str::words(strip_tags($this->body), 30);
+    }
+
+    public function getFormattedDate()
+    {
+        // dd($this->published_at);
+        return $this->published_at->format('F jS Y');
     }
 
 
