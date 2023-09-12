@@ -61,7 +61,7 @@
                 EcoHarvest: Nurturing Nature's Treasures
             </a>
             <p class="text-lg text-gray-600">
-                Explore the bountiful world of natural resources and learn how to protect, conserve, and celebrate the Earth's greatest gifts.
+                {{\App\Models\TextWidget::getTitle('header')}}
             </p>
         </div>
     </header>
@@ -96,7 +96,7 @@
 
         {{ $slot }}
 
-       
+
 
     </div>
 
