@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Models\Post;
+use App\Models\Category;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 
@@ -71,44 +72,28 @@ class PostController extends Controller
             ->where('active', true)
             ->whereDate('published_at', '<=', Carbon::now())
             ->whereDate('published_at', '>', $post->published_at)
-            ->orderBy('published_at', 'desc')
+            ->orderBy('published_at', 'asc')
             ->limit(1)
             ->first();
 
         return view('post.view', compact('post', 'prev', 'next'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Post $post)
-    {
-        //
+
+    public function byCategory(Category $category){
+        $posts = Post::query()
+        ->join('category_post', 'posts.id', '=', 'category_post.post_id')
+        ->where('category_post.category_id', '=', $category->id)
+        ->where('active','=', true)
+        ->whereDate('published_at', '<=', Carbon::now())
+        ->orderBy('published_at', 'desc')
+        ->paginate(10);
+
+
+        return view('home', compact('posts'));
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Post $post)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Post $post)
-    {
-        //
-    }
+
 }

@@ -2,7 +2,9 @@
 
 namespace App\View\Components;
 
+use App\Models\Category;
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\DB;
 
 class AppLayout extends Component
 {
@@ -23,6 +25,15 @@ class AppLayout extends Component
      */
     public function render()
     {
-        return view('layouts.app');
+
+        $categories = Category::query()
+        ->join('category_post', 'categories.id', '=', 'category_post.category_id')
+        ->select('categories.title', 'categories.slug', DB::raw('count(*) as total'))
+        ->groupBy('categories.id', 'categories.title', 'categories.slug')
+        ->orderByDesc('total')
+        ->limit(5)
+        ->get();
+
+        return view('layouts.app', compact('categories'));
     }
 }

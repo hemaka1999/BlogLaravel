@@ -127,7 +127,7 @@
                 <div class="w-full flex pt-6">
                     <div class="w-1/2">
                     @if ($prev)
-                    <a href="{{route('view', $prev)}}" class="w-1/2 bg-white shadow hover:shadow-md text-left p-6">
+                    <a href="{{route('view', $prev)}}" class="block w-full bg-white shadow hover:shadow-md text-left p-6">
                         <p class="text-lg text-blue-800 font-bold flex items-center">
                             <i class="fas fa-arrow-left pr-1"></i>
                             Previous</p>
@@ -136,11 +136,11 @@
                     @endif
                     </div>
                     <div class="w-1/2">
-                    <a href="{{route('view', $next)}}" class="w-1/2 bg-white shadow hover:shadow-md text-right p-6">
+                    <a href="{{route('view', $next)}}" class="block w-full bg-white shadow hover:shadow-md text-right p-6">
                         <p class="text-lg text-blue-800 font-bold flex items-center justify-end">
                             Next
                             <i class="fas fa-arrow-right pl-1"></i></p>
-                            <p class="pt-2">{{$next->title}}</p>
+                            <p class="pt-2">{{\Illuminate\Support\Str::words($next->title, 10)}}</p>
                     </a>
                 </div>
                 </div>
@@ -171,7 +171,11 @@
 
             </section>
 
+            <x-sidebar />
+
             {{-- <!-- Sidebar Section -->
+
+                <
             <aside class="w-full md:w-1/3 flex flex-col items-center px-3">
 
                 <div class="w-full bg-white shadow flex flex-col my-4 p-6">
