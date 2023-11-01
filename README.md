@@ -2,16 +2,13 @@
 
 EcoHarvest is a platform for posting about natural resources, categorizing them by specific areas. Users can like and comment on posts, while administrators can manage the content posted on the website.
 
-**[Insert Project Logo or Icon Here]**
-
 ## Table of Contents
 - [Introduction](#introduction)
 - [Technologies and Frameworks](#technologies-and-frameworks)
 - [Features](#features)
 - [Demonstration](#demonstration)
 - [Installation](#installation)
-
-
+- [Contact Information](#contact-information)
 
 ## Introduction
 
@@ -30,7 +27,6 @@ EcoHarvest is built using the following technologies and frameworks:
 - Post and categorize information about natural resources.
 - Like and comment on posts to foster engagement.
 - Admin capabilities to manage user-generated content.
-- [Add more features here]
 
 ## Demonstration
 
@@ -55,3 +51,13 @@ cd BlogLaravel
 # Install dependencies
 composer install
 npm install
+
+```
+
+
+## Contact Information
+
+For questions, feedback, or inquiries, please contact us at:
+
+- Email: hemaka1999@gmail.com
+- Website: [https://hemaka1999.github.io/HemakaPamodya/](https://hemaka1999.github.io/HemakaPamodya/)
