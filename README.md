@@ -47,10 +47,10 @@ To get EcoHarvest up and running on your local machine, follow these steps:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/eco-harvest.git
+git clone https://github.com/your-username/eco-harvest.git](https://github.com/hemaka1999/BlogLaravel.git
 
 # Navigate to the project directory
-cd eco-harvest
+cd BlogLaravel
 
 # Install dependencies
 composer install
